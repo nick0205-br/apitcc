@@ -22,7 +22,7 @@ server.post('/usuario/login', async (req, resp) => {
     }
 })
 
-server.post('/usuario', async (req, resp) => {
+server.post('/cadastrar/usuario', async (req, resp) => {
     try {
         const novoLogin = req.body;
         
