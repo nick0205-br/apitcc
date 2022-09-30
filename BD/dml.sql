@@ -1,7 +1,7 @@
 use aurorabksDB;
 
 -- criar login
-INSERT INTO tb_usuario_login (ds_email, ds_senha)
+INSERT INTO tb_usuariologin (ds_email, ds_senha)
      VALUES ('j', '1234');
 
 -- login
@@ -12,15 +12,15 @@ select id_admin 		 id
    
    -- login
 select id_usuario 		 id
-  from tb_usuario_login
+  from tb_usuariologin
  where ds_email 		 = 'joao@email.com.br'
    and ds_senha			 = '1234';
    
 -- usuario referente a conta
-select nm_usuario           nome,
+select nm_usuario     nome,
 	   ds_cpf		        cpf
-  from tb_usuario_conta     
- where id_usuario_conta     = 12 ;
+  from tb_usuario    
+ where id_usuario    = 12 ;
 
 -- endereço do usuario
 select id_usuario_endereco      id,
@@ -33,8 +33,8 @@ select id_usuario_endereco      id,
        ds_estado                estado,
        ds_pais                  pais,
        ds_complemento           complemento
-  from tb_usuario_endereco
- where  id_usuario_conta         = 12;
+  from tb_usuarioendereco
+ where  id_usuario         = 12;
 
 -- inserir dados
 insert into tb_produto (nm_categoria, nm_livro, nm_autor, nm_editora, nr_isbn13, nr_isbn10, vl_preco, nm_original, ds_sinopse, ds_versao, nr_pagina, nr_volume, nr_largura, nr_comprimento)
