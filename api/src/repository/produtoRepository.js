@@ -17,4 +17,8 @@ export async function ConsultarTodos() {
     return linhas;
 }
 
-
+export async function Editar() {
+    const comando = `
+    UPDATE ?????
+    `
+}
